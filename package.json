@@ -13,7 +13,6 @@
   "dependencies": {
     "@reduxjs/toolkit": "2.11.2",
     "@tailwindcss/vite": "4.1.18",
- 
     "date-fns": "4.1.0",
     "date-fns-tz": "3.2.0",
     "i18next": "25.7.3",
@@ -31,6 +30,7 @@
     "@types/react-dom": "19.2.3",
     "@types/suncalc": "1.9.2",
     "@vitejs/plugin-react": "5.1.2",
+    "babel-plugin-react-compiler": "1.0.0",
     "oxfmt": "^0.21.0",
     "oxlint": "^1.36.0",
     "typescript": "^5.0.2",
