@@ -8,7 +8,7 @@ function Footer() {
         <a className="underline" href="mailto:medievalrain@medievalrain.net">
           MedievalRain
         </a>
-        <div> 2023</div>
+        <div>2025</div>
       </div>
       <div className="flex gap-1">
         <div>{t("footer.open_meteo")}</div>
