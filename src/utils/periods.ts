@@ -32,8 +32,8 @@ export function getPeriods(timezone: string) {
     date = fromZonedTime(date, timezone);
 
     return {
-      timestamp: timestamp,
-      name: name,
+      timestamp,
+      name,
     };
   });
   return periods.slice(1);
