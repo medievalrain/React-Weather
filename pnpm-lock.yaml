@@ -45,7 +45,7 @@ importers:
         specifier: 9.2.0
         version: 9.2.0(@types/react@19.2.7)(react@19.2.3)(redux@5.0.1)
       suncalc:
-        specifier: ^1.9.0
+        specifier: 1.9.0
         version: 1.9.0
       tailwindcss:
         specifier: ^3.3.3
@@ -58,7 +58,7 @@ importers:
         specifier: 19.2.3
         version: 19.2.3(@types/react@19.2.7)
       '@types/suncalc':
-        specifier: ^1.9.0
+        specifier: 1.9.2
         version: 1.9.2
       '@vitejs/plugin-react':
         specifier: 5.1.2
