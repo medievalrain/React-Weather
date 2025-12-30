@@ -1,5 +1,5 @@
-import { utcToZonedTime, getTimezoneOffset, zonedTimeToUtc } from "date-fns-tz";
-import { getHours, set, addDays, setHours, startOfDay } from "date-fns";
+import {toZonedTime,fromZonedTime}  from "date-fns-tz";
+import { getHours, set, addDays, setHours, startOfDay, } from "date-fns";
 import { Period } from "../features/weather/weatherTypes";
 import { normalizeDate, toTimestampInSeconds } from "./format";
 
@@ -10,7 +10,7 @@ export function getPeriods(timezone: string) {
   let date = normalizedDate;
   const periods: Period[] = Array.from({ length: 4 }, (_, index) => {
     const timestamp = toTimestampInSeconds(normalizeDate(date));
-    const zonedDate = utcToZonedTime(date, timezone);
+    const zonedDate = toZonedTime(date, timezone);
     const hour = getHours(zonedDate);
 
     let name = "";
@@ -29,7 +29,7 @@ export function getPeriods(timezone: string) {
       date = startOfDay(zonedDate);
       date = addDays(date, 1);
     }
-    date = zonedTimeToUtc(date, timezone);
+    date = fromZonedTime(date, timezone);
 
     return {
       timestamp: timestamp,
