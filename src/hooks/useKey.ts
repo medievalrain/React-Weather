@@ -1,14 +1,17 @@
 import { useEffect } from "react";
 
 export default function useKey(key: string, action: () => void) {
+
+
+  useEffect(() => {
+  const controller= new AbortController()
   function downHandler(event: KeyboardEvent) {
     if (event.key === key) action();
   }
 
-  useEffect(() => {
-    document.addEventListener("keydown", downHandler);
+    document.addEventListener("keydown", downHandler,{signal:controller.signal});
     return () => {
-      document.removeEventListener("keydown", downHandler);
+      controller.abort()
     };
-  }, [key]);
+  }, [key, action]);
 }

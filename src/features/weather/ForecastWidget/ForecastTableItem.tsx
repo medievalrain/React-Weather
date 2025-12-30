@@ -2,8 +2,6 @@ import { useTranslation } from "react-i18next";
 import { languageSchema } from "../../i18n/i18nTypes";
 import { formatInTimeZone } from "date-fns-tz";
 import WeatherIcon from "../../../ui/WeatherIcon";
-import { getDirectionSymbol } from "../../../utils/format";
-
 interface ForecastTableItemProps {
   timestamp: number;
   temperatureMax: number;
@@ -21,7 +19,6 @@ function ForecastTableItem({
   temperatureMax,
   temperatureMin,
   windspeed,
-  windDirection,
   precipitation,
   timezone,
   weathercode,

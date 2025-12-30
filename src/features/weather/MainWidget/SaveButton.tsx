@@ -1,11 +1,10 @@
 import { saveCity } from "../../city/citySlice";
 import { useAppDispatch } from "../../../hooks/storeHooks";
 import IconButton from "../../../ui/IconButton";
-import { useTranslation } from "react-i18next";
+
 
 function AddButton() {
   const dispatch = useAppDispatch();
-  const { t } = useTranslation();
   return (
     <IconButton onClick={() => dispatch(saveCity())} ariaLabelKey="save_city">
       <svg

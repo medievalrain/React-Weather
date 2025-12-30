@@ -14,7 +14,7 @@ export const weatherApi = createApi({
   }),
   endpoints: (build) => ({
     getWeather: build.query<WeatherResponse, IWeatherQuery>({
-      query: ({ longitude, latitude, timezone }: IWeatherQuery) => ({
+      query: ({ longitude, latitude }: IWeatherQuery) => ({
         url: "/forecast",
         params: {
           latitude: latitude,
