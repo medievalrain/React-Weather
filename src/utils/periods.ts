@@ -1,5 +1,5 @@
-import {toZonedTime,fromZonedTime}  from "date-fns-tz";
-import { getHours, addDays, setHours, startOfDay, } from "date-fns";
+import { toZonedTime, fromZonedTime } from "date-fns-tz";
+import { getHours, addDays, setHours, startOfDay } from "date-fns";
 import { Period } from "../features/weather/weatherTypes";
 import { normalizeDate, toTimestampInSeconds } from "./format";
 

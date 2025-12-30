@@ -1,10 +1,6 @@
 import { useTranslation } from "react-i18next";
 import useWeather from "../../../hooks/useWeather";
-import {
-  getBeaufort,
-  normalizeDate,
-  toTimestampInSeconds,
-} from "../../../utils/format";
+import { getBeaufort, normalizeDate, toTimestampInSeconds } from "../../../utils/format";
 import WindDescription from "./WindDescription";
 import WindIcon from "./WindIcon";
 

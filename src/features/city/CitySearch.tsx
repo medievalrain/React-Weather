@@ -38,21 +38,14 @@ function CitySearch() {
           placeholder={`${t("search.placeholder")}...`}
           onChange={(e) => setInputValue(e.target.value)}
         />
-        <label
-          htmlFor="search"
-          className="cursor-pointer text-lg font-semibold"
-        >
+        <label htmlFor="search" className="cursor-pointer text-lg font-semibold">
           {cityTest.city && `${cityTest.city.name}, ${cityTest.city.country}`}
         </label>
         {isOpened ? (
           <ul className="absolute top-12 z-50 w-full overflow-hidden rounded-md bg-white shadow-lg dark:bg-gray-800">
             {foundCities?.results &&
               foundCities.results.map((city) => (
-                <CitySearchItem
-                  searchItem={city}
-                  setInputValue={setInputValue}
-                  key={city.id}
-                />
+                <CitySearchItem searchItem={city} setInputValue={setInputValue} key={city.id} />
               ))}
           </ul>
         ) : null}

@@ -18,16 +18,8 @@ const store = configureStore({
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({})
-      .prepend(
-        listener.middleware,
-        themeListener.middleware,
-        cityListener.middleware,
-      )
-      .concat([
-        geocodingApi.middleware,
-        weatherApi.middleware,
-        airQualityApi.middleware,
-      ]),
+      .prepend(listener.middleware, themeListener.middleware, cityListener.middleware)
+      .concat([geocodingApi.middleware, weatherApi.middleware, airQualityApi.middleware]),
 });
 
 export default store;

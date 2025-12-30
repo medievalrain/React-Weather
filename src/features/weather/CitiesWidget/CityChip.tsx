@@ -42,16 +42,11 @@ function CityChip({ id, isEditMode }: CityChipProps) {
         onClick={handleClick}
         aria-label={ariaLabel}
         className={`flex items-center rounded-md bg-gray-700 px-2 font-semibold text-white transition-all duration-200  ${
-          isEditMode
-            ? "hover:bg-red-400 hover:text-gray-700"
-            : "hover:bg-gray-600"
+          isEditMode ? "hover:bg-red-400 hover:text-gray-700" : "hover:bg-gray-600"
         } hover:shadow-md`}
       >
         {city?.name} {Math.round(weather.current_weather.temperature)}°
-        <WeatherIcon
-          size="small"
-          weathercode={weather.current_weather.weathercode}
-        />
+        <WeatherIcon size="small" weathercode={weather.current_weather.weathercode} />
       </button>
     );
   } else return null;

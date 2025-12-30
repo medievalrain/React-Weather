@@ -15,11 +15,7 @@ function CitiesWidget() {
   return (
     <div className="flex flex-col gap-2 px-2 py-4">
       <div className="flex items-center justify-between">
-        <div>
-          {isEditMode
-            ? t("cities.delete_cities")
-            : t("cities.weather_other_cities")}
-        </div>
+        <div>{isEditMode ? t("cities.delete_cities") : t("cities.weather_other_cities")}</div>
 
         <EditButton
           disabled={savedCities.length === 0}

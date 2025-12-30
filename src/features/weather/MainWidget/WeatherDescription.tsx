@@ -14,20 +14,14 @@ function WeatherDescription({
   temperatures,
   times,
 }: WeatherDescriptionProps) {
-  const comparision = compareTemperature(
-    currentTemperature,
-    temperatures,
-    times,
-  );
+  const comparision = compareTemperature(currentTemperature, temperatures, times);
   const { t } = useTranslation();
 
   return (
     <div className="text-3xl font-extrabold">
       {`${t("description.today")} ${t(`description.${comparision}`)} ${t(
         "description.than_yesterday",
-      )}, ${t("description.and")} ${t(
-        `description.weathercode.${weathercode}`,
-      )}`}
+      )}, ${t("description.and")} ${t(`description.weathercode.${weathercode}`)}`}
     </div>
   );
 }

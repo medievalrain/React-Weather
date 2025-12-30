@@ -1,13 +1,14 @@
 {
   "name": "react-template",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "oxfmt . --check"
   },
   "dependencies": {
     "@reduxjs/toolkit": "2.11.2",
@@ -30,9 +31,8 @@
     "@types/react-dom": "19.2.3",
     "@types/suncalc": "^1.9.0",
     "@vitejs/plugin-react": "5.1.2",
+    "oxfmt": "^0.21.0",
     "oxlint": "^1.36.0",
-    "prettier": "3.7.4",
-    "prettier-plugin-tailwindcss": "0.7.2",
     "typescript": "^5.0.2",
     "vite": "7.3.0"
   }

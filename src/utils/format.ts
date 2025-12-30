@@ -78,9 +78,7 @@ export function compareTemperature(
     milliseconds: 0,
   });
   const timestamp = toTimestampInSeconds(subDays(normalizedDate, 1));
-  const yesterdayTemperature = Math.round(
-    temperatures[times.indexOf(timestamp)],
-  );
+  const yesterdayTemperature = Math.round(temperatures[times.indexOf(timestamp)]);
   if (currentTemperature > yesterdayTemperature) {
     return "warmer";
   } else if (currentTemperature === yesterdayTemperature) {
@@ -90,11 +88,8 @@ export function compareTemperature(
   return "same"; // it's needed to shut up TypeScript
 }
 
-
 export function getBeaufort(windSpeed: number): number {
-  const thresholds = [
-    0.3, 1.6, 3.4, 5.5, 8.0, 10.8, 13.9, 17.2, 20.8, 24.5, 28.5, 32.7,
-  ];
+  const thresholds = [0.3, 1.6, 3.4, 5.5, 8.0, 10.8, 13.9, 17.2, 20.8, 24.5, 28.5, 32.7];
 
   for (let i = 0; i < thresholds.length; i++) {
     if (windSpeed < thresholds[i]) {

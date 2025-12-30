@@ -27,17 +27,13 @@ const citySlice = createSlice({
       state.currentCity = action.payload;
     },
     saveCity(state) {
-      const isDuplicate = state.savedCities.some(
-        (id) => id === state.currentCity,
-      );
+      const isDuplicate = state.savedCities.some((id) => id === state.currentCity);
       if (!isDuplicate) {
         state.savedCities.push(state.currentCity);
       }
     },
     deleteCity(state, action: PayloadAction<number>) {
-      state.savedCities = state.savedCities.filter(
-        (id) => id !== action.payload,
-      );
+      state.savedCities = state.savedCities.filter((id) => id !== action.payload);
     },
   },
 });

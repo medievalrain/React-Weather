@@ -31,15 +31,11 @@ function MainWidget() {
           times={weather.hourly.time}
         />
         <div className="flex -translate-x-4 items-center font-mono text-7xl font-extrabold">
-          <WeatherIcon
-            size="big"
-            weathercode={weather.current_weather.weathercode}
-          />
+          <WeatherIcon size="big" weathercode={weather.current_weather.weathercode} />
           {Math.round(weather.current_weather.temperature)}°
         </div>
         <div>
-          {t("feels_like")}{" "}
-          {Math.round(weather.hourly.apparent_temperature[index])}°
+          {t("feels_like")} {Math.round(weather.hourly.apparent_temperature[index])}°
         </div>
         <PeriodsForecast
           temperatures={weather.hourly.temperature_2m}

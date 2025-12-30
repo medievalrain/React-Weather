@@ -7,12 +7,9 @@ interface FormattedDateProps {
 
 function FormattedDate({ timezone }: FormattedDateProps) {
   const { i18n } = useTranslation();
-  const formattedDateString = formatInTimeZone(
-    new Date(),
-    timezone,
-    "dd MMMM, EEEE",
-    { locale: languageSchema[i18n.language] },
-  );
+  const formattedDateString = formatInTimeZone(new Date(), timezone, "dd MMMM, EEEE", {
+    locale: languageSchema[i18n.language],
+  });
 
   return <div>{formattedDateString}</div>;
 }

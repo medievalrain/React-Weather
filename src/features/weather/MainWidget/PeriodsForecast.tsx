@@ -9,26 +9,16 @@ interface PeriodsForecastProps {
   timezone: string;
 }
 
-function PeriodsForecast({
-  temperatures,
-  weathercodes,
-  time,
-  timezone,
-}: PeriodsForecastProps) {
+function PeriodsForecast({ temperatures, weathercodes, time, timezone }: PeriodsForecastProps) {
   const periods = getPeriods(timezone);
   const { t } = useTranslation();
   return (
     <div className="flex justify-between">
       {periods.map((period) => (
         <div key={period.name} className="flex flex-col capitalize">
-          <div className="text-gray-600 dark:text-gray-400">
-            {t(`periods.${period.name}`)}
-          </div>
+          <div className="text-gray-600 dark:text-gray-400">{t(`periods.${period.name}`)}</div>
           <div className="flex -translate-x-4 items-center font-mono text-2xl font-extrabold">
-            <WeatherIcon
-              size="medium"
-              weathercode={weathercodes[time.indexOf(period.timestamp)]}
-            />
+            <WeatherIcon size="medium" weathercode={weathercodes[time.indexOf(period.timestamp)]} />
             {Math.round(temperatures[time.indexOf(period.timestamp)])}°
           </div>
         </div>

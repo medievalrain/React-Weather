@@ -8,12 +8,7 @@ interface IconButtonProps {
   ariaLabelKey: string;
 }
 
-function IconButton({
-  children,
-  onClick,
-  disabled,
-  ariaLabelKey,
-}: IconButtonProps) {
+function IconButton({ children, onClick, disabled, ariaLabelKey }: IconButtonProps) {
   const { t } = useTranslation();
   return (
     <button
