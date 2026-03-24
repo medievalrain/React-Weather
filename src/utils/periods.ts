@@ -1,40 +1,41 @@
-import { toZonedTime, fromZonedTime } from "date-fns-tz";
 import { getHours, addDays, setHours, startOfDay } from "date-fns";
+import { toZonedTime, fromZonedTime } from "date-fns-tz";
+
 import { Period } from "../features/weather/weatherTypes";
 import { normalizeDate, toTimestampInSeconds } from "./format";
 
 export function getPeriods(timezone: string) {
-  const rawDate = new Date();
-  const normalizedDate = normalizeDate(rawDate);
+	const rawDate = new Date();
+	const normalizedDate = normalizeDate(rawDate);
 
-  let date = normalizedDate;
-  const periods: Period[] = Array.from({ length: 4 }, () => {
-    const timestamp = toTimestampInSeconds(normalizeDate(date));
-    const zonedDate = toZonedTime(date, timezone);
-    const hour = getHours(zonedDate);
+	let date = normalizedDate;
+	const periods: Period[] = Array.from({ length: 4 }, () => {
+		const timestamp = toTimestampInSeconds(normalizeDate(date));
+		const zonedDate = toZonedTime(date, timezone);
+		const hour = getHours(zonedDate);
 
-    let name = "";
+		let name = "";
 
-    if (hour < 5) {
-      name = "night";
-      date = setHours(zonedDate, 5);
-    } else if (hour < 12) {
-      name = "morning";
-      date = setHours(zonedDate, 12);
-    } else if (hour < 17) {
-      name = "day";
-      date = setHours(zonedDate, 17);
-    } else {
-      name = "evening";
-      date = startOfDay(zonedDate);
-      date = addDays(date, 1);
-    }
-    date = fromZonedTime(date, timezone);
+		if (hour < 5) {
+			name = "night";
+			date = setHours(zonedDate, 5);
+		} else if (hour < 12) {
+			name = "morning";
+			date = setHours(zonedDate, 12);
+		} else if (hour < 17) {
+			name = "day";
+			date = setHours(zonedDate, 17);
+		} else {
+			name = "evening";
+			date = startOfDay(zonedDate);
+			date = addDays(date, 1);
+		}
+		date = fromZonedTime(date, timezone);
 
-    return {
-      timestamp,
-      name,
-    };
-  });
-  return periods.slice(1);
+		return {
+			timestamp,
+			name,
+		};
+	});
+	return periods.slice(1);
 }
