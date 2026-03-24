@@ -5,35 +5,35 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview",
     "format": "oxfmt . --check"
   },
   "dependencies": {
     "@reduxjs/toolkit": "2.11.2",
-    "@tailwindcss/vite": "4.1.18",
+    "@tailwindcss/vite": "4.2.2",
     "date-fns": "4.1.0",
     "date-fns-tz": "3.2.0",
-    "i18next": "25.7.3",
-    "i18next-browser-languagedetector": "8.2.0",
+    "i18next": "25.10.9",
+    "i18next-browser-languagedetector": "8.2.1",
     "i18next-http-backend": "3.0.2",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "react-i18next": "16.5.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-i18next": "16.6.6",
     "react-redux": "9.2.0",
     "suncalc": "1.9.0",
-    "tailwindcss": "4.1.18"
+    "tailwindcss": "4.2.2"
   },
   "devDependencies": {
-    "@types/react": "19.2.7",
+    "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@types/suncalc": "1.9.2",
-    "@vitejs/plugin-react": "5.1.2",
+    "@vitejs/plugin-react": "6.0.1",
     "babel-plugin-react-compiler": "1.0.0",
-    "oxfmt": "^0.21.0",
-    "oxlint": "^1.36.0",
-    "typescript": "5.9.3",
-    "vite": "7.3.0"
+    "oxfmt": "0.42.0",
+    "oxlint": "1.57.0",
+    "typescript": "6.0.2",
+    "vite": "8.0.2"
   }
 }
