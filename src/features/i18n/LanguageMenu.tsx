@@ -14,7 +14,7 @@ function LanguageMenu() {
 	const [isOpened, setIsOpened] = useState(false);
 	const { i18n, t } = useTranslation();
 	function changeLanguage(locale: string) {
-		i18n.changeLanguage(locale);
+		void i18n.changeLanguage(locale);
 		setIsOpened(false);
 	}
 	useKey("Escape", () => setIsOpened(false));
