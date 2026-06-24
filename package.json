@@ -14,33 +14,32 @@
 		"typecheck": "tsgo"
 	},
 	"dependencies": {
-		"@reduxjs/toolkit": "2.11.2",
-		"@tailwindcss/vite": "4.2.4",
-		"date-fns": "4.1.0",
+		"@reduxjs/toolkit": "2.12.0",
+		"@tailwindcss/vite": "4.3.1",
+		"date-fns": "4.4.0",
 		"date-fns-tz": "3.2.0",
-		"i18next": "26.0.8",
+		"i18next": "26.3.2",
 		"i18next-browser-languagedetector": "8.2.1",
 		"i18next-http-backend": "4.0.0",
-		"react": "19.2.5",
-		"react-dom": "19.2.5",
-		"react-i18next": "17.0.6",
-		"react-redux": "9.2.0",
-		"suncalc": "1.9.0",
-		"tailwindcss": "4.2.4"
+		"react": "19.2.7",
+		"react-dom": "19.2.7",
+		"react-i18next": "17.0.8",
+		"react-redux": "9.3.0",
+		"suncalc": "2.0.0",
+		"tailwindcss": "4.3.1"
 	},
 	"devDependencies": {
 		"@rolldown/plugin-babel": "0.2.3",
-		"@types/react": "19.2.14",
+		"@types/react": "19.2.17",
 		"@types/react-dom": "19.2.3",
 		"@types/suncalc": "1.9.2",
-		"@typescript/native-preview": "7.0.0-dev.20260505.1",
-		"@vitejs/plugin-react": "6.0.1",
+		"@vitejs/plugin-react": "6.0.3",
 		"babel-plugin-react-compiler": "1.0.0",
-		"oxfmt": "0.48.0",
-		"oxlint": "1.63.0",
-		"oxlint-tsgolint": "0.22.1",
-		"sonda": "0.11.1",
-		"typescript": "6.0.3",
-		"vite": "8.0.10"
+		"oxfmt": "0.56.0",
+		"oxlint": "1.71.0",
+		"oxlint-tsgolint": "0.23.0",
+		"sonda": "0.13.1",
+		"typescript": "7.0.1-rc",
+		"vite": "8.1.0"
 	}
 }
