@@ -5,8 +5,8 @@ function Footer() {
 	return (
 		<footer className="flex flex-col items-center justify-center">
 			<div className="flex gap-1">
-				<a className="underline" href="mailto:medievalrain@medievalrain.net">
-					MedievalRain
+				<a className="underline" href="mailto:react-weather.banshee009@passmail.com">
+					Someone
 				</a>
 				<div>2026</div>
 			</div>
