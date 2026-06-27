@@ -18,7 +18,7 @@
 		"@tailwindcss/vite": "4.3.1",
 		"date-fns": "4.4.0",
 		"date-fns-tz": "3.2.0",
-		"i18next": "26.3.2",
+		"i18next": "26.3.3",
 		"i18next-browser-languagedetector": "8.2.1",
 		"i18next-http-backend": "4.0.0",
 		"react": "19.2.7",
@@ -38,7 +38,6 @@
 		"oxfmt": "0.56.0",
 		"oxlint": "1.71.0",
 		"oxlint-tsgolint": "0.23.0",
-		"sonda": "0.13.1",
 		"typescript": "7.0.1-rc",
 		"vite": "8.1.0"
 	}
